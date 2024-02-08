@@ -62,8 +62,6 @@ from pyspark.sql.functions import desc
 states_to_color = [row['Province_State'] for row in top_10_states.collect()]
 
 print("States to color:", states_to_color)
-
-# Filter out unknown states
 known_states_to_color = [state for state in states_to_color if state in state_abbr]
 
 # Create the figure
